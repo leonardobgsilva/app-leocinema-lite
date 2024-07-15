@@ -1,0 +1,13 @@
+{
+    "name": "leocinema",
+    "version": "1.0.0",
+    "description": "Aplicação lite LeoCinema",
+    "main": "index.js",
+    "scripts": {
+      "start": "http-server -p 80"
+    },
+    "dependencies": {
+      "http-server": "^14.1.1"
+    }
+  }
+  
