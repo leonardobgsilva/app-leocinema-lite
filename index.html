@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leo's Cinema - Comprar Ingresso de Cinema</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: url('https://classic.exame.com/wp-content/uploads/2020/12/GettyImages-133033277.jpg?quality=70&strip=info&w=1024') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 400px;
+      padding: 20px;
+      background: #a50020; /* Vermelho */
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      position: relative;
+      animation: fadeIn 1s;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    h1 {
+      color: #fff; /* Texto branco */
+      font-size: 28px;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      margin: 10px 0;
+      background: rgba(255, 255, 255, 0.5); /* Fundo branco com transparência */
+      color: #000; /* Texto preto */
+      transition: background 0.3s;
+    }
+
+    input[type="text"]::placeholder, input[type="date"]::placeholder, input[type="time"]::placeholder, select::placeholder {
+      color: #fff; /* Texto branco para as placeholders */
+    }
+
+    input[type="submit"] {
+      background: #D10024; /* Vermelho Barcelona */
+      color: #fff; /* Texto branco */
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background: #a70019; /* Cor mais escura no hover */
+    }
+
+    .confirmation {
+      margin-top: 20px;
+      padding: 10px;
+      background: #a50020; /* Vermelho */
+      color: #fff; /* Texto branco */
+      border-radius: 4px;
+    }
+
+    .cinema-name {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #fff; /* Texto branco */
+      font-style: italic; /* Texto em itálico */
+    }
+
+    .popcorn-icon {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="cinema-name">
+      Leo's Cinema
+    </div>
+    <h1>Ingressos de Cinema</h1>
+    <form id="purchaseForm">
+      <select id="movie" placeholder="Escolha o filme">
+        <option value="avengers">Vingadores: Ultimato</option>
+        <option value="joker">Coringa</option>
+        <option value="inception">A Origem</option>
+        <option value="harry-potter">Harry Potter</option>
+        <option value="matrix">Matrix</option>
+        <option value="titanic">Titanic</option>
+        <option value="velozes-e-furiosos">Velozes e Furiosos</option>
+        <option value="garfield">Garfield</option>
+        <option value="dark-knight">Batman: O Cavaleiro das Trevas</option>
+        <option value="it-a-coisa">It - A Coisa</option>
+      </select>
+      <input type="date" id="date" placeholder="Escolha a data" required />
+      <input type="time" id="time" placeholder="Escolha o horário" required />
+      <input type="number" id="quantity" placeholder="Quantidade de ingressos" required />
+      <input type="submit" value="COMPRAR INGRESSO" id="buyButton" />
+    </form>
+    <div id="confirmation" class="confirmation"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
